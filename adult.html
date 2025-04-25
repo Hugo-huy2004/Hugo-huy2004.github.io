@@ -58,7 +58,8 @@
         }
 
         input[type="text"],
-        textarea {
+        textarea,
+        input[type="file"] {
             width: 100%;
             padding: 12px;
             border: 1px solid #e2e8f0;
@@ -70,7 +71,8 @@
         }
 
         input[type="text"]:focus,
-        textarea:focus {
+        textarea:focus,
+        input[type="file"]:focus {
             outline: none;
             border-color: #2b6cb0;
             box-shadow: 0 0 5px rgba(43, 108, 176, 0.2);
@@ -79,6 +81,18 @@
         textarea {
             height: 300px;
             resize: vertical;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .file-input-label {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #718096;
         }
 
         .submit-btn {
@@ -137,7 +151,8 @@
             }
 
             input[type="text"],
-            textarea {
+            textarea,
+            input[type="file"] {
                 padding: 10px;
                 font-size: 0.9rem;
             }
@@ -154,7 +169,7 @@
         <a href="index.html" class="back-btn">← Quay lại</a>
         <h1>THƯ PHÂN ƯU CỐ ĐTC PHANXICÔ</h1>
         
-        <form id="adultForm" action="https://formsubmit.co/hugowishpax@gmail.com" method="POST">
+        <form id="adultForm" action="https://formsubmit.co/hugowishpax@gmail.com" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="Thư Người Lớn Gửi Đức Giáo Hoàng">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_autoresponse" value="Cảm ơn bạn đã gửi thư! Chúng tôi đã nhận được thư của bạn.">
@@ -173,6 +188,12 @@
                 <label for="letterContent">Nội dung thư (tối đa 1500 chữ):</label>
                 <textarea id="letterContent" name="Nội dung thư" required></textarea>
                 <div class="char-count"><span id="charRemaining">1500</span> chữ còn lại</div>
+            </div>
+
+            <div class="form-group">
+                <label for="letterFile">Đính kèm tệp thư (PDF hoặc DOCX):</label>
+                <input type="file" id="letterFile" name="Tệp thư đính kèm" accept=".pdf,.docx">
+                <div class="file-input-label">Chỉ chấp nhận tệp .pdf hoặc .docx</div>
             </div>
             
             <button type="submit" class="submit-btn">Gửi Thư</button>
