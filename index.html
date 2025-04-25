@@ -3,293 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đức Giáo Hoàng Phanxicô</title>
+    <title>Thư gửi Đức Giáo Hoàng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Comic Sans MS', Arial, sans-serif;
-            margin: 20px;
-            background: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png'), linear-gradient(to bottom, #FFD1DC, #E0FFFF);
-            background-size: cover;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            border: 3px solid #FF69B4;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
-        }
-        h1, h2 {
-            text-align: center;
-            color: #FF1493;
-        }
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            font-size: 40px;
-            margin: 10px 0;
-            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-        }
-        .series {
-            font-size: 16px;
-            color: #FF69B4;
-            text-align: center;
-            font-style: italic;
-        }
-        .info-section {
-            font-size: 16px;
-            margin: 20px 0;
-            line-height: 1.5;
-            color: #333;
-        }
-        .info-section span {
-            font-weight: bold;
-            color: #FF4500;
-        }
-        .image-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .image-section img {
-            width: 300px;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
-            transition: transform 0.3s ease;
-        }
-        .image-section img:hover {
-            transform: scale(1.05);
-        }
-        .question-section {
-            margin: 20px 0;
-        }
-        .question-section p {
-            margin: 10px 0;
-            font-size: 16px;
-            color: #333;
-        }
-        .drop-box {
-            display: inline-block;
-            width: 200px;
-            height: 30px;
-            border: 2px dashed #FF69B4;
-            background: rgba(255, 182, 193, 0.1);
-            vertical-align: middle;
-            text-align: center;
-            line-height: 30px;
-            color: #FF1493;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .drag-options {
-            margin: 25px 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e8ecef, #f8f9fa);
+            min-height: 100vh;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
-        .drag-item {
-            padding: 5px 10px;
-            background: #FF69B4;
-            color: white;
-            border-radius: 5px;
-            cursor: move;
-            font-size: 14px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-        .prayer-section {
-            margin-top: 20px;
-        }
-        .prayer-section textarea {
-            width: 98%;
-            height: 300px;
-            border: 2px dashed #FF69B4;
-            background: rgba(255, 182, 193, 0.1);
-            font-size: 16px;
-            padding: 10px;
-            resize: none;
-            color: #FF1493;
-            border-radius: 10px;
-        }
-        .footer {
+
+        .container {
+            max-width: 900px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            font-size: 12px;
-            color: #FF69B4;
-            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #1a3c6d;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .choice-btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .adult-btn {
+            background: #2b6cb0;
+            color: white;
+        }
+
+        .children-btn {
+            background: #38a169;
+            color: white;
+        }
+
+        .choice-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .choice-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #4a5568;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer .highlight {
+            color: #1a3c6d;
+            font-weight: 700;
+        }
+
+        .footer .contact {
+            color: #718096;
             font-style: italic;
         }
-        .submit-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 30px;
-            background: #FF69B4;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .submit-btn:hover {
-            background: #FF1493;
-            transform: scale(1.05);
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .choice-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- FORM SUBMIT INTEGRATION -->
-    <form id="dataForm" action="https://formsubmit.co/hugowishpax@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Bài làm về Đức Giáo Hoàng">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_autoresponse" value="Cảm ơn bạn đã tham gia! Chúng tôi đã nhận được bài làm của bạn.">
-        
-        <!-- Hidden fields for answers -->
-        <input type="hidden" id="formName" name="Tên học sinh">
-        <input type="hidden" id="formAnswer1" name="Ngày được bầu">
-        <input type="hidden" id="formAnswer2" name="Vị Giáo Hoàng thứ">
-        <input type="hidden" id="formAnswer3" name="Nơi sinh">
-        <input type="hidden" id="formAnswer4" name="Ngày rửa tội">
-        <input type="hidden" id="formAnswer5" name="Tên khai sinh">
-        <input type="hidden" id="formAnswer6" name="Ngôn ngữ">
-        <input type="hidden" id="formAnswer7" name="Tông hiệu">
-        <input type="hidden" id="formAnswer8" name="Danh hiệu">
-        <input type="hidden" id="formAnswer9" name="Chức vụ trước đó">
-        <input type="hidden" id="formPrayer" name="Lời cầu nguyện">
-    </form>
-
     <div class="container">
-        <p style="text-align: center; font-size: 16px; margin: 10px 0;">
-            <strong>TÊN MÌNH:</strong> 
-            <input type="text" id="studentName" style="width: 200px; border: none; border-bottom: 2px dashed #FF69B4; background: transparent; padding: 2px 5px; color: #FF1493;" placeholder="Nhập tên của bạn">
-        </p>
-        <h1>ĐỨC GIÁO HOÀNG PHANXICÔ</h1>
-
-        <div class="info-section">
-            <p><strong>Sử dụng những từ dưới đây để trả lời các câu hỏi:</strong></p>
+        <h1>THƯ PHÂN ƯU CỐ ĐTC PHANXICÔ</h1>
+        <p>Xin vui lòng chọn loại thư bạn muốn viết:</p>
+        
+        <div class="button-container">
+            <button class="choice-btn adult-btn" onclick="location.href='adult.html'">
+                Dành cho Phụ Huynh/Người Lớn
+            </button>
+            <button class="choice-btn children-btn" onclick="location.href='children.html'">
+                Dành cho Thiếu Nhi
+            </button>
         </div>
-
-        <div class="image-section">
-            <img src="20230501072949-18-removebg-preview.png" alt="Đức Giáo Hoàng Phanxicô" onclick="window.location.href='https://www.facebook.com/tnttchanhtoamytho/'">
+        
+        <div class="footer">
+            <p class="highlight">Bản quyền © 2024 - Xứ Đoàn Các Thánh Tử Đạo Việt Nam</p>
+            <p>Giáo Xứ Chánh Tòa Mỹ Tho - Giáo Phận Mỹ Tho - Việt Nam</p>
+            <p class="contact">Địa chỉ: 32 Hùng Vương, Phường 1, Thành phố Mỹ Tho, Tỉnh Tiền Giang</p>
+            <p>Thiết kế bởi: <span class="highlight">Ban Truyền Thông & Ban Kỹ Thuật</span> - Trưởng Pr.Le.G.Huy</p>
         </div>
-
-        <div class="question-section">
-            <p>1. ĐTC Phanxicô được bầu làm Đức Giáo Hoàng vào ngày <span class="drop-box" data-answer="13/03/2013" id="answer1"></span> và là vị Giáo Hoàng thứ <span class="drop-box" data-answer="266" id="answer2"></span> của Giáo Hội Công Giáo</p>
-            <p>2. Ngài sinh ra tại <span class="drop-box" data-answer="Argentina" id="answer3"></span> và ngày chịu phép rửa là <span class="drop-box" data-answer="17/12/1936" id="answer4"></span></p>
-            <p>3. Tên khai sinh của ĐTC Phanxicô là <span class="drop-box" data-answer="Jorge Mario Bergoglio" id="answer5"></span></p>
-            <p>4. Ngài có thể nói lưu loát 3 ngôn ngữ là <span class="drop-box" data-answer="Tây Ban Nha, Đức, Ý" id="answer6"></span></p>
-            <p>5. Ngài là vị Giáo Hoàng đầu tiên lấy Tông Hiệu <span class="drop-box" data-answer="Phanxicô" id="answer7"></span></p>
-            <p>6. Ngài được gọi là vị Giáo Hoàng của <span class="drop-box" data-answer="người nghèo" id="answer8"></span></p>
-            <p>7. Trước khi trở thành Đức Giáo Hoàng, ĐTC PHANXICÔ là <span class="drop-box" data-answer="Tổng Giám Mục" id="answer9"></span> tại Buenos Aires</p>
-        </div>
-
-        <div class="drag-options" id="dragOptions">
-            <div class="drag-item" draggable="true">13/03/2013</div>
-            <div class="drag-item" draggable="true">266</div>
-            <div class="drag-item" draggable="true">Argentina</div>
-            <div class="drag-item" draggable="true">17/12/1936</div>
-            <div class="drag-item" draggable="true">Jorge Mario Bergoglio</div>
-            <div class="drag-item" draggable="true">Tây Ban Nha, Đức, Ý</div>
-            <div class="drag-item" draggable="true">Phanxicô</div>
-            <div class="drag-item" draggable="true">người nghèo</div>
-            <div class="drag-item" draggable="true">Tổng Giám Mục</div>
-            <!-- Distractor items -->
-            <div class="drag-item" draggable="true">01/01/2000</div>
-            <div class="drag-item" draggable="true">100</div>
-            <div class="drag-item" draggable="true">Brazil</div>
-            <div class="drag-item" draggable="true">Tiếng Anh, Pháp, Ý</div>
-            <div class="drag-item" draggable="true">Giuse</div>
-            <div class="drag-item" draggable="true">người giàu</div>
-        </div>
-
-        <div class="prayer-section">
-            <p><strong>Em cầu nguyện cho Đức Giáo Hoàng Phanxicô</strong></p>
-            <textarea id="prayerText" placeholder="Viết lời cầu nguyện của bạn..."></textarea>
-        </div>
-
-        <button class="submit-btn" onclick="submitForm()">GỬI BÀI</button>
     </div>
-
-    <script>
-        // Hàm xáo trộn mảng
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // Xáo trộn các đáp án khi tải trang
-        const dragOptions = document.getElementById('dragOptions');
-        const dragItems = Array.from(dragOptions.children);
-        const shuffledItems = shuffleArray(dragItems);
-        dragOptions.innerHTML = '';
-        shuffledItems.forEach(item => dragOptions.appendChild(item));
-
-        // Xử lý kéo thả
-        const dropBoxes = document.querySelectorAll('.drop-box');
-
-        dragItems.forEach(item => {
-            item.addEventListener('dragstart', (e) => {
-                e.dataTransfer.setData('text/plain', e.target.textContent);
-                item.style.opacity = '0.5';
-            });
-
-            item.addEventListener('dragend', () => {
-                item.style.opacity = '1';
-            });
-        });
-
-        dropBoxes.forEach(box => {
-            box.addEventListener('dragover', (e) => {
-                e.preventDefault();
-            });
-
-            box.addEventListener('drop', (e) => {
-                e.preventDefault();
-                const draggedText = e.dataTransfer.getData('text/plain');
-                const correctAnswer = box.getAttribute('data-answer');
-
-                if (draggedText === correctAnswer) {
-                    box.textContent = draggedText;
-                    box.style.background = '#90EE90';
-                    const draggedItem = Array.from(dragItems).find(item => item.textContent === draggedText);
-                    draggedItem.style.display = 'none';
-                } else {
-                    box.style.background = '#FF6347';
-                    setTimeout(() => {
-                        box.style.background = 'rgba(255, 182, 193, 0.1)';
-                    }, 1000);
-                }
-            });
-        });
-
-        // Hàm gửi dữ liệu
-        function submitForm() {
-            // Lấy tất cả câu trả lời
-            document.getElementById('formName').value = document.getElementById('studentName').value;
-            document.getElementById('formAnswer1').value = document.getElementById('answer1').textContent;
-            document.getElementById('formAnswer2').value = document.getElementById('answer2').textContent;
-            document.getElementById('formAnswer3').value = document.getElementById('answer3').textContent;
-            document.getElementById('formAnswer4').value = document.getElementById('answer4').textContent;
-            document.getElementById('formAnswer5').value = document.getElementById('answer5').textContent;
-            document.getElementById('formAnswer6').value = document.getElementById('answer6').textContent;
-            document.getElementById('formAnswer7').value = document.getElementById('answer7').textContent;
-            document.getElementById('formAnswer8').value = document.getElementById('answer8').textContent;
-            document.getElementById('formAnswer9').value = document.getElementById('answer9').textContent;
-            document.getElementById('formPrayer').value = document.getElementById('prayerText').value;
-
-            // Gửi form
-            document.getElementById('dataForm').submit();
-            
-            // Thông báo
-            alert('Cảm ơn bạn đã hoàn thành! Kết quả đã được gửi.');
-        }
-    </script>
 </body>
 </html>

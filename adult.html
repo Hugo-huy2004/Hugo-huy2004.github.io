@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Người Lớn - Đức Giáo Hoàng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e8ecef, #f8f9fa);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #1a3c6d;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2d3748;
+            font-size: 1.1rem;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #2d3748;
+            background: #f7fafc;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2b6cb0;
+            box-shadow: 0 0 5px rgba(43, 108, 176, 0.2);
+        }
+
+        textarea {
+            height: 300px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .submit-btn:hover {
+            background: #2c5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .char-count {
+            text-align: right;
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .char-count.error {
+            color: #e53e3e;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2b6cb0;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #2c5282;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            input[type="text"],
+            textarea {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .submit-btn {
+                padding: 10px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Quay lại</a>
+        <h1>THƯ PHÂN ƯU CỐ ĐTC PHANXICÔ</h1>
+        
+        <form id="adultForm" action="https://formsubmit.co/hugowishpax@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Thư Người Lớn Gửi Đức Giáo Hoàng">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Cảm ơn bạn đã gửi thư! Chúng tôi đã nhận được thư của bạn.">
+
+            <div class="form-group">
+                <label for="holyName">Họ và tên Thánh:</label>
+                <input type="text" id="holyName" name="Họ và tên Thánh" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Nơi viết thư (Giáo xứ/Thành phố):</label>
+                <input type="text" id="location" name="Nơi viết thư" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="letterContent">Nội dung thư (tối đa 1500 chữ):</label>
+                <textarea id="letterContent" name="Nội dung thư" required></textarea>
+                <div class="char-count"><span id="charRemaining">1500</span> chữ còn lại</div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Gửi Thư</button>
+        </form>
+    </div>
+
+    <script>
+        // Character count for textarea
+        const textarea = document.getElementById('letterContent');
+        const charCount = document.getElementById('charRemaining');
+        const charCountContainer = charCount.parentElement;
+
+        textarea.addEventListener('input', function() {
+            const remaining = 1500 - this.value.length;
+            charCount.textContent = remaining;
+            
+            if (remaining < 0) {
+                charCountContainer.classList.add('error');
+                this.value = this.value.substring(0, 1500);
+                charCount.textContent = 0;
+            } else {
+                charCountContainer.classList.remove('error');
+            }
+        });
+
+        // Form submission handling
+        document.getElementById('adultForm').addEventListener('submit', function(e) {
+            // Form submission is handled by FormSubmit
+            alert('Cảm ơn bạn đã viết thư! Thư của bạn đã được gửi đi.');
+        });
+    </script>
+</body>
+</html>
