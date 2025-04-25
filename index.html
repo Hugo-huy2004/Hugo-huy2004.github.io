@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đức Giáo Hoàng Phanxicô</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            margin: 20px;
+            background: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png'), linear-gradient(to bottom, #FFD1DC, #E0FFFF);
+            background-size: cover;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 3px solid #FF69B4;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #FF1493;
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 40px;
+            margin: 10px 0;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+        }
+        .series {
+            font-size: 16px;
+            color: #FF69B4;
+            text-align: center;
+            font-style: italic;
+        }
+        .info-section {
+            font-size: 16px;
+            margin: 20px 0;
+            line-height: 1.5;
+            color: #333;
+        }
+        .info-section span {
+            font-weight: bold;
+            color: #FF4500;
+        }
+        .image-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-section img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+            transition: transform 0.3s ease;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .question-section {
+            margin: 20px 0;
+        }
+        .question-section p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .drop-box {
+            display: inline-block;
+            width: 200px;
+            height: 30px;
+            border: 2px dashed #FF69B4;
+            background: rgba(255, 182, 193, 0.1);
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+            color: #FF1493;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .drag-options {
+            margin: 25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .drag-item {
+            padding: 5px 10px;
+            background: #FF69B4;
+            color: white;
+            border-radius: 5px;
+            cursor: move;
+            font-size: 14px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .prayer-section {
+            margin-top: 20px;
+        }
+        .prayer-section textarea {
+            width: 98%;
+            height: 300px;
+            border: 2px dashed #FF69B4;
+            background: rgba(255, 182, 193, 0.1);
+            font-size: 16px;
+            padding: 10px;
+            resize: none;
+            color: #FF1493;
+            border-radius: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #FF69B4;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p style="text-align: center; font-size: 16px; margin: 10px 0;">
+            <strong>TÊN MÌNH:</strong> <input type="text" style="width: 200px; border: none; border-bottom: 2px dashed #FF69B4; background: transparent; padding: 2px 5px; color: #FF1493;" placeholder="Nhập tên của bạn">
+        </p>
+        <h1>ĐỨC GIÁO HOÀNG PHANXICÔ</h1>
+
+        <div class="info-section">
+            <p><strong>Sử dụng những từ dưới đây để trả lời các câu hỏi:</strong></p>
+        </div>
+
+        <div class="image-section">
+            <img src="20230501072949-18-removebg-preview.png" alt="Đức Giáo Hoàng Phanxicô" onclick="window.location.href='https://www.facebook.com/tnttchanhtoamytho/'">
+        </div>
+
+        <div class="question-section">
+            <p>ĐTC Phanxicô được bầu làm Đức Giáo Hoàng vào ngày <span class="drop-box" data-answer="13/03/2013"></span> và là vị Giáo Hoàng thứ <span class="drop-box" data-answer="266"></span> của Giáo Hội Công Giáo</p>
+            <p>Ngày đầu sinh ra tại <span class="drop-box" data-answer="Argentina"></span> và ngày chịu phép rửa là <span class="drop-box" data-answer="17/12/1936"></span></p>
+            <p>Tên khai sinh của ĐTC Phanxicô là <span class="drop-box" data-answer="Jorge Mario Bergoglio"></span></p>
+            <p>Ngài có thể nói lưu loát 3 ngôn ngữ là <span class="drop-box" data-answer="Tây Ban Nha, Đức, Ý"></span></p>
+            <p>Ngài là vị Giáo Hoàng đầu tiên lấy Tông Hiệu <span class="drop-box" data-answer="Phanxicô"></span> và là vị Giáo Hoàng đầu tiên được gọi là vị Giáo Hoàng của <span class="drop-box" data-answer="người nghèo"></span></p>
+            <p>Trước khi trở thành Đức Giáo Hoàng, ĐTC PHANXICÔ là <span class="drop-box" data-answer="Tổng Giám Mục"></span> tại Buenos Aires</p>
+        </div>
+
+        <div class="drag-options" id="dragOptions">
+            <div class="drag-item" draggable="true">13/03/2013</div>
+            <div class="drag-item" draggable="true">266</div>
+            <div class="drag-item" draggable="true">Argentina</div>
+            <div class="drag-item" draggable="true">17/12/1936</div>
+            <div class="drag-item" draggable="true">Jorge Mario Bergoglio</div>
+            <div class="drag-item" draggable="true">Tây Ban Nha, Đức, Ý</div>
+            <div class="drag-item" draggable="true">Phanxicô</div>
+            <div class="drag-item" draggable="true">người nghèo</div>
+            <div class="drag-item" draggable="true">Tổng Giám Mục</div>
+            <!-- Thêm các lựa chọn sai để tăng thử thách -->
+            <div class="drag-item" draggable="true">01/01/2000</div>
+            <div class="drag-item" draggable="true">100</div>
+            <div class="drag-item" draggable="true">Brazil</div>
+            <div class="drag-item" draggable="true">Tiếng Anh, Pháp, Ý</div>
+            <div class="drag-item" draggable="true">Giuse</div>
+            <div class="drag-item" draggable="true">người giàu</div>
+        </div>
+
+        <div class="prayer-section">
+            <p><strong>Em cầu nguyện cho Đức Giáo Hoàng Phanxicô</strong></p>
+            <textarea placeholder="Viết lời cầu nguyện của bạn..."></textarea>
+        </div>
+    </div>
+
+    <script>
+        // Hàm xáo trộn mảng (Fisher-Yates shuffle)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Xáo trộn các đáp án khi tải trang
+        const dragOptions = document.getElementById('dragOptions');
+        const dragItems = Array.from(dragOptions.children);
+        const shuffledItems = shuffleArray(dragItems);
+        dragOptions.innerHTML = '';
+        shuffledItems.forEach(item => dragOptions.appendChild(item));
+
+        // Xử lý kéo thả
+        const dropBoxes = document.querySelectorAll('.drop-box');
+
+        dragItems.forEach(item => {
+            item.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.textContent);
+                item.style.opacity = '0.5';
+            });
+
+            item.addEventListener('dragend', () => {
+                item.style.opacity = '1';
+            });
+        });
+
+        dropBoxes.forEach(box => {
+            box.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            box.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const draggedText = e.dataTransfer.getData('text/plain');
+                const correctAnswer = box.getAttribute('data-answer');
+
+                if (draggedText === correctAnswer) {
+                    box.textContent = draggedText;
+                    box.style.background = '#90EE90';
+                    const draggedItem = Array.from(dragItems).find(item => item.textContent === draggedText);
+                    draggedItem.style.display = 'none';
+                } else {
+                    box.style.background = '#FF6347';
+                    setTimeout(() => {
+                        box.style.background = 'rgba(255, 182, 193, 0.1)';
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
